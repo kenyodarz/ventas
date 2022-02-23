@@ -12,10 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/detalle")
 public class DetalleVentaController extends GenericRestController<DetalleVenta, Long> {
 
-    private final DetalleVentaServiceAPI serviceAPI;
-
     public DetalleVentaController(DetalleVentaServiceAPI serviceAPI) {
         super(serviceAPI);
-        this.serviceAPI = serviceAPI;
     }
 }
