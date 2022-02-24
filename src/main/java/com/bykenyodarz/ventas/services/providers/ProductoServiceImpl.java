@@ -15,7 +15,7 @@ public class ProductoServiceImpl  extends GenericServiceImpl<Producto, Long> imp
     private final ProductoRepository repository;
 
     @Override
-    public Producto findProductoWithStock(String id) {
+    public Producto findProductoWithStock(Long id) {
         return this.repository.findProductoWithStock(id).orElse(null);
     }
 
