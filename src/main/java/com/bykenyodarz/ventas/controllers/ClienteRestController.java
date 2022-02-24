@@ -23,7 +23,7 @@ public class ClienteRestController extends GenericRestController<Cliente, Long> 
     }
 
     @GetMapping("/dni/{dni}")
-    public ResponseEntity<?> findByDni(@PathVariable String dni) {
+    public ResponseEntity<Cliente> findByDni(@PathVariable String dni) {
 
         var cliente = serviceAPI.findByDni(dni);
         if (cliente == null) return ResponseEntity.notFound().build();
